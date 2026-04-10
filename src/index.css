@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg-color: #0f172a;
+  --bg-gradient: radial-gradient(circle at 50% -20%, #1e293b 0%, #020617 100%);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --surface-color: rgba(30, 41, 59, 0.4);
+  --surface-border: rgba(255, 255, 255, 0.08);
+  --surface-hover: rgba(51, 65, 85, 0.6);
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Theme Colors - Neon / Vibrant */
+  --theme-smalltalk: #3b82f6;      /* Blue */
+  --theme-dilemmes: #ec4899;       /* Pink */
+  --theme-confessions: #a855f7;    /* Purple */
+  --theme-nominations: #f59e0b;    /* Amber */
+  --theme-debats: #10b981;         /* Emerald */
+  --theme-scenarios: #ef4444;      /* Red */
+  --theme-rumble: linear-gradient(135deg, #a855f7, #ec4899, #f59e0b);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg-color);
+  background-image: var(--bg-gradient);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: var(--surface-color);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--surface-border);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Theme color classes */
+.theme-bg-smalltalk { background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.3); }
+.theme-bg-dilemmes { background: rgba(236, 72, 153, 0.1); border-color: rgba(236, 72, 153, 0.3); }
+.theme-bg-confessions { background: rgba(168, 85, 247, 0.1); border-color: rgba(168, 85, 247, 0.3); }
+.theme-bg-nominations { background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.3); }
+.theme-bg-debats { background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); }
+.theme-bg-scenarios { background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.3); }
+.theme-bg-rumble { 
+  background: rgba(255, 255, 255, 0.05); 
+  border-color: rgba(255, 255, 255, 0.2); 
+  position: relative;
+}
+.theme-bg-rumble::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: var(--theme-rumble);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.5;
+}
+
+.theme-text-smalltalk { color: var(--theme-smalltalk); }
+.theme-text-dilemmes { color: var(--theme-dilemmes); }
+.theme-text-confessions { color: var(--theme-confessions); }
+.theme-text-nominations { color: var(--theme-nominations); }
+.theme-text-debats { color: var(--theme-debats); }
+.theme-text-scenarios { color: var(--theme-scenarios); }
+.theme-text-rumble { 
+  background-image: var(--theme-rumble); 
+  background-clip: text; 
+  -webkit-background-clip: text;
+  color: transparent; 
+}
+
+/* Base button styles */
+button {
+  font-family: var(--font-heading);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background: #f8fafc;
+  color: #020617;
+  font-weight: 600;
+  font-size: 1.125rem;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-secondary);
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--surface-border);
+  transition: all 0.2s ease;
+}
+.btn-secondary:hover {
+  background: var(--surface-hover);
+  color: var(--text-primary);
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
