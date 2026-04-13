@@ -56,7 +56,12 @@ export default function ThemeSelector({ onSelect }) {
               }}
             >
               <div className="theme-card-icon">
-                <Icon className={`theme-text-${config.id}`} size={32} />
+                <Icon 
+                  className={config.id === 'rumble' 
+                    ? `theme-icon-rumble rolling` 
+                    : `theme-text-${config.id}`} 
+                  size={32} 
+                />
               </div>
               <h2 className={`theme-card-title theme-text-${config.id}`}>
                 {themeName}

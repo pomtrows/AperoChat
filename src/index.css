@@ -102,6 +102,23 @@ h1, h2, h3, h4, h5, h6 {
   color: transparent; 
 }
 
+.theme-icon-rumble {
+  color: #ec4899; /* Pink base color for the icon */
+  filter: drop-shadow(0 0 5px rgba(168, 85, 247, 0.5));
+}
+
+@keyframes roll {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(10deg) scale(1.1); }
+  50% { transform: rotate(-10deg) scale(1.1); }
+  75% { transform: rotate(5deg) scale(1.05); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+.rolling {
+  animation: roll 2s ease-in-out infinite;
+}
+
 /* Base button styles */
 button {
   font-family: var(--font-heading);
