@@ -194,7 +194,7 @@ button {
 
 @media (max-width: 640px) {
   .header-container {
-    margin-bottom: 2rem !important;
+    margin-bottom: 1.5rem !important;
   }
   
   .header-title {
@@ -202,8 +202,11 @@ button {
   }
   
   .header-subtitle {
-    font-size: 0.9rem !important;
-    display: none; /* Hide subtitle on very small screens to save space */
+    font-size: 0.85rem !important;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.3;
   }
 
   .themes-grid {
