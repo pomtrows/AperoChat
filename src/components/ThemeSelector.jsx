@@ -35,13 +35,7 @@ export default function ThemeSelector({ onSelect }) {
       variants={container}
       initial="hidden"
       animate="show"
-      style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-        gap: '1.5rem',
-        padding: '1rem',
-        width: '100%'
-      }}
+      className="themes-grid"
     >
       {themesList.map((themeName) => {
         const config = themeConfig[themeName];
@@ -51,18 +45,7 @@ export default function ThemeSelector({ onSelect }) {
           <motion.div variants={item} key={themeName} style={{ height: '100%' }}>
             <button
               onClick={() => onSelect(themeName)}
-              className={`glass theme-bg-${config.id}`}
-              style={{
-                width: '100%',
-                height: '100%',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'flex-start',
-                padding: '2rem',
-                textAlign: 'left',
-                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                cursor: 'pointer',
-              }}
+              className={`glass theme-card theme-bg-${config.id}`}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-5px) scale(1.02)';
                 e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.2)';
@@ -72,13 +55,13 @@ export default function ThemeSelector({ onSelect }) {
                 e.currentTarget.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
               }}
             >
-              <div style={{ marginBottom: '1.5rem', padding: '1rem', borderRadius: '16px', background: 'rgba(0,0,0,0.2)', display: 'inline-flex' }}>
+              <div className="theme-card-icon">
                 <Icon className={`theme-text-${config.id}`} size={32} />
               </div>
-              <h2 className={`theme-text-${config.id}`} style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>
+              <h2 className={`theme-card-title theme-text-${config.id}`}>
                 {themeName}
               </h2>
-              <p style={{ color: 'var(--text-secondary)', lineHeight: 1.5 }}>
+              <p className="theme-card-desc">
                 {config.desc}
               </p>
             </button>

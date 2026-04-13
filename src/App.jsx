@@ -54,12 +54,12 @@ function App() {
 
   return (
     <div style={{ padding: '2rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
-      <header style={{ textAlign: 'center', marginBottom: currentView === 'selector' ? '4rem' : '2rem', transition: 'all 0.3s ease' }}>
-        <h1 style={{ fontSize: '2.5rem', fontWeight: 800, margin: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
+      <header className="header-container" style={{ textAlign: 'center', transition: 'all 0.3s ease' }}>
+        <h1 className="header-title" style={{ fontWeight: 800, margin: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
           <Sparkles className="theme-text-rumble" size={40} />
           <span>Opéro Chat</span>
         </h1>
-        <p style={{ color: 'var(--text-secondary)', marginTop: '0.5rem', fontSize: '1.1rem' }}>
+        <p className="header-subtitle" style={{ color: 'var(--text-secondary)', marginTop: '0.5rem' }}>
           Le jeu parfait pour détruire (ou renforcer) vos amitiés.
         </p>
       </header>
