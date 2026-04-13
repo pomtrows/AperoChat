@@ -193,12 +193,22 @@ button {
 }
 
 @media (max-width: 640px) {
+  #root > div {
+    padding: 1rem !important; /* Reduce main padding from 2rem to 1rem on mobile */
+  }
+
   .header-container {
     margin-bottom: 1.5rem !important;
+    width: 100%;
   }
   
   .header-title {
     font-size: 1.75rem !important;
+  }
+
+  .header-title svg {
+    width: 30px !important;
+    height: 30px !important;
   }
   
   .header-subtitle {

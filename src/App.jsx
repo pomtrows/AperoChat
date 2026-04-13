@@ -57,7 +57,7 @@ function App() {
       <header className="header-container" style={{ textAlign: 'center', transition: 'all 0.3s ease' }}>
         <h1 className="header-title" style={{ fontWeight: 800, margin: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
           <Sparkles className="theme-text-rumble" size={40} />
-          <span>Opéro Chat</span>
+          <span>Apéro chat</span>
         </h1>
         <p className="header-subtitle" style={{ color: 'var(--text-secondary)', marginTop: '0.5rem' }}>
           Le jeu parfait pour détruire (ou renforcer) vos amitiés.
