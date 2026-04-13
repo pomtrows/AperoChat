@@ -124,7 +124,7 @@ Nominations	Qui pourrait accidentellement devenir un criminel recherché ?
 Nominations	Qui est le plus susceptible de gagner au loto et de tout perdre en un mois ?
 Nominations	Qui est le plus susceptible de se marier à Las Vegas avec un inconnu ?
 Nominations	Qui pourrait être le premier à tester une puce dans le cerveau ?
-Nominations	Pour combien tu te ferais sodomisé par un copain?
+Confessions	Pour combien tu te ferais sodomiser par un copain?
 Débats improbables	Est-ce qu'on peut être ami avec son ex sans que ce soit bizarre ?
 Débats improbables	Est-ce qu'il vaut mieux voyager dans le futur ou dans le passé ?
 Débats improbables	Est-ce qu'un film est toujours moins bien que le livre ?
