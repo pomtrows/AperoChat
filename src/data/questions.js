@@ -139,7 +139,7 @@ Scénarios WTF	Si tu devais vivre dans un jeu vidéo, lequel choisirais-tu ?
 Scénarios WTF	Tu es élu président de la république, quelle est ta première réforme ?
 Scénarios WTF	Tu as le droit d'effacer une personne historique de la mémoire collective, qui ?
 Scénarios WTF	Si tu devais ne porter qu'une seule couleur pour le reste de ta vie, laquelle ?
-Scénarios WTF	On t'offre la jeunesse éternelle, mais tu ressembles à un enfant de 8 ans pour toujours.
+Scénarios WTF	On t'offre la jeunesse éternelle, mais tu ressembles à un enfant de 8 ans pour toujours. L'acceptes-tu?
 Scénarios WTF	Tu as 24h pour dépenser 1 million d'euros sinon tu perds tout. Quel est ton plan ?
 Scénarios WTF	Tu te réveilles et tu es le dernier humain sur Terre. Quelle est ta première réaction ?
 Dilemmes Absurdes	Tu préfères ne pouvoir te déplacer qu'en faisant du "moonwalk" ou à cloche pied?
@@ -219,7 +219,7 @@ Scénarios WTF	Si tu devais inventer un nouveau sport olympique ridicule ?
 Scénarios WTF	Tu es condamné à manger le même repas pour l'éternité, c'est quoi ?
 Scénarios WTF	Si tu pouvais téléporter une seule personne sur la Lune là maintenant ?
 Scénarios WTF	Si tu pouvais vivre dans une époque historique pendant 1h sans danger ?
-Scénarios WTF	Tu as un budget illimité pour organiser la fête qu'est ce que tu fais?
+Scénarios WTF	Tu as un budget illimité pour organiser la fête du siécle qu'est ce que tu fais?
 Scénarios WTF	Si tu étais un Pokémon, quel serait ton type et tes attaques ?
 Scénarios WTF	Tu peux transformer tes ennemis en petits animaux inoffensifs, lequel choisis-tu ?
 Scénarios WTF	Si tu devais vivre dans un dessin animé ?

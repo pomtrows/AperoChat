@@ -239,6 +239,7 @@ button {
 
   .header-container {
     margin-bottom: 1.5rem !important;
+    padding-top: 2rem; /* Descend le titre */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -246,25 +247,22 @@ button {
   }
   
   .header-title {
-    font-size: 1.75rem !important;
-    display: block; /* Use block to allow simple text-align centering */
+    font-size: 2.2rem !important; /* +25% approx de 1.75rem */
+    display: block;
     width: 100%;
     position: relative;
+    text-align: center;
   }
 
   .header-icon {
     position: absolute;
     left: 50%;
-    /* 
-       "Apéro chat" is approx 140px wide at 1.75rem. 
-       Icon (30px) + Gap (8px) = 38px.
-       To center the text exactly, the icon must be pushed left.
-    */
-    transform: translateX(-100px); 
-    width: 24px !important;
-    height: 24px !important;
+    /* Ajusté pour la nouvelle taille de police */
+    transform: translateX(-120px); 
+    width: 28px !important;
+    height: 28px !important;
     top: 50%;
-    margin-top: -12px;
+    margin-top: -14px;
   }
   
   .header-subtitle {

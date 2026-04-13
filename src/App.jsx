@@ -29,8 +29,19 @@ function App() {
       questionPool.current.sort(() => Math.random() - 0.5);
     }
     
-    // Pop a question
-    const nextQ = questionPool.current.pop();
+    // Pick the next question index
+    let indexToPop = questionPool.current.length - 1;
+    
+    // In Rumble mode, ensure the theme is different from the current one
+    if (themeName === 'Rumble' && currentQuestion) {
+      const alternativeIndex = questionPool.current.findIndex(q => q.theme !== currentQuestion.theme);
+      if (alternativeIndex !== -1) {
+        indexToPop = alternativeIndex;
+      }
+    }
+    
+    // Splice the question out of the pool
+    const nextQ = questionPool.current.splice(indexToPop, 1)[0];
     setCurrentQuestion(nextQ);
   };
 
@@ -56,12 +67,13 @@ function App() {
     <div style={{ padding: '2rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
       <header className="header-container">
         <h1 className="header-title">
-          <Sparkles className="header-icon theme-text-rumble" size={40} />
           <span>Apéro chat</span>
         </h1>
-        <p className="header-subtitle" style={{ color: 'var(--text-secondary)', marginTop: '0.5rem' }}>
-          Le jeu parfait pour détruire (ou renforcer) vos amitiés.
-        </p>
+        {currentView === 'selector' && (
+          <p className="header-subtitle" style={{ color: 'var(--text-secondary)', marginTop: '0.5rem' }}>
+            Le jeu parfait pour détruire (ou renforcer) vos amitiés.
+          </p>
+        )}
       </header>
 
       <main style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%', maxWidth: '1000px', margin: '0 auto' }}>
