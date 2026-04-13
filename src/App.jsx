@@ -91,7 +91,11 @@ function App() {
                 Retour aux thèmes
               </button>
               
-              <QuestionDisplay question={currentQuestion} activeTheme={activeTheme} />
+              <QuestionDisplay 
+                question={currentQuestion} 
+                activeTheme={activeTheme} 
+                onNext={handleNext}
+              />
               
               <button className="btn-primary" onClick={handleNext} style={{ alignSelf: 'center', padding: '1.25rem 3rem', fontSize: '1.25rem', marginTop: '1rem' }}>
                 <span>Question Suivante</span>

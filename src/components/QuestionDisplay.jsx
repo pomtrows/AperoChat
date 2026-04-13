@@ -14,7 +14,7 @@ const getThemeId = (themeName) => {
   return mapping[themeName] || 'rumble';
 };
 
-export default function QuestionDisplay({ question, activeTheme }) {
+export default function QuestionDisplay({ question, activeTheme, onNext }) {
   if (!question) {
     return (
       <div className="glass" style={{ padding: '4rem', textAlign: 'center', marginTop: '2rem' }}>
@@ -38,6 +38,7 @@ export default function QuestionDisplay({ question, activeTheme }) {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: -20, scale: 0.95 }}
       transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+      onClick={onNext}
       className={`glass theme-bg-${themeId}`}
       style={{
         padding: '4rem 2.5rem',
@@ -49,7 +50,9 @@ export default function QuestionDisplay({ question, activeTheme }) {
         justifyContent: 'center',
         alignItems: 'center',
         position: 'relative',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        cursor: 'pointer',
+        userSelect: 'none'
       }}
     >
       <div 
